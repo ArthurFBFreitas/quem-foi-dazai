@@ -1,0 +1,137 @@
+@charset " UTF-8"; 
+
+@font-face {
+    font-family:"baskerville";
+    src: url(fontes/LibreBaskerville-VariableFont_wght.ttf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "CormorantGaramond";
+    src: url(fontes/CormorantGaramond-VariableFont_wght.ttf) format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(fontes/Inter-VariableFont_opsz\,wght.ttf) format('opentype');
+    font-weight: normal;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --cor1: #050654;
+    --cor2: #323437;
+    --cor3: #485666;
+    --bordas: #D2D5D9;
+
+    --h1: "baskerville";
+    --h2: "CormorantGaramond";
+    --p: "inter"
+    
+}
+
+body {
+    background-image: url(background.jpg);
+    border: var(--cor2);
+}
+
+header {
+    background-color: transparent;
+    height: 100px;
+    text-align: center;
+    border-bottom: solid var(--bordas);
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.416) 1px 1px 15px;
+    padding-top: 20px;
+}
+
+header > h1 {
+    color: var(--cor1);
+    font-family: var(--h1);
+    text-shadow: rgb(74, 71, 71) 1px 2px 10px;
+    padding-top: 20px;
+    font-size:60px;
+    text-decoration: overline var(--cor3);
+}
+
+main h2 {
+    color: var(--cor3);
+    font-family: var(--h2);
+    font-size: 45px;
+    text-align: center;
+    padding-top: 65px;
+    padding-bottom: 40px;
+}
+
+#ft1 {
+    display: block;
+    margin: auto;
+    width: min(400px, 55%);
+    height: auto;
+    border: 10px solid  #4856663e;
+}
+
+p {
+    padding-top: 40px;
+    font-size: 23px;
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    line-height: 35px;
+    text-shadow: rgba(0, 0, 0, 0.54) 1px 1px 5px;
+    color: var(--cor1);
+    font-family: var(--p);
+
+    
+}
+
+a {
+    font-weight: bold;
+    color: var(--cor3);
+    text-decoration: none;
+    font-family: var(--h2);
+}
+
+a:hover {
+    color: var(--cor2);
+    text-shadow: black 2px 1px 12px;
+
+}
+
+a::after {
+    content: "➦";
+}
+
+#sitacao {
+    background-color: #a0a1a35d;
+    color: var(--cor1);
+    margin-top: 80px;
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 300px;
+    text-shadow: black 1px 1px 12px;
+}
+
+
+
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 40px;
+    }
+
+    main h2 {
+        font-size: 30px;
+        padding-top: 35px;
+    }
+
+    p {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+}
