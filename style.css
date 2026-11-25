@@ -85,9 +85,7 @@ p {
     line-height: 35px;
     text-shadow: rgba(0, 0, 0, 0.54) 1px 1px 5px;
     color: var(--cor1);
-    font-family: var(--p);
-
-    
+    font-family: var(--p);    
 }
 
 a {
@@ -100,7 +98,6 @@ a {
 a:hover {
     color: var(--cor2);
     text-shadow: black 2px 1px 12px;
-
 }
 
 a::after {
@@ -113,13 +110,70 @@ a::after {
     margin-top: 80px;
     margin-left: 150px;
     margin-right: 150px;
-    height: 300px;
+    height: 120px;
     text-shadow: black 1px 1px 12px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.obras {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.obras img {
+    width: 200px;
+    height: auto;
+}
+
+.obras {
+  display: grid;
+  /* Duas colunas do tamanho exato da imagem (ajuste 180px se quiser maior/menor) */
+  grid-template-columns: repeat(2, 180px);
+  /* Espaçamento entre linhas e colunas bem próximo */
+  gap: 16px 24px;
+  /* Faz o grid ter apenas a largura das 2 colunas + gap */
+  width: fit-content;
+  /* Centraliza o bloco inteiro na tela */
+  margin: 0 auto;
+  /* Garante que os itens fiquem alinhados no centro de cada célula */
+  justify-content: center;
+}
+
+.obras img:hover {
+  transform: scale(1.08);
+  outline: 3px solid #222;
+}
+
+
+.obras {
+  display: grid;
+  /* Duas colunas do tamanho exato da imagem (ajuste 180px se quiser maior/menor) */
+  grid-template-columns: repeat(2, 180px);
+  /* Espaçamento entre linhas e colunas bem próximo */
+  gap: 16px 24px;
+  /* Faz o grid ter apenas a largura das 2 colunas + gap */
+  width: fit-content;
+  /* Centraliza o bloco inteiro na tela */
+  margin: 0 auto;
+  /* Garante que os itens fiquem alinhados no centro de cada célula */
+  justify-content: center;
+  padding-bottom: 50px;
+
+}
+
+.obras img {
+  width: 100%; /* Preenche os 180px da coluna de forma uniforme */
+  height: 250px; /* Mantém a altura padronizada que você já escolheu */
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 578px) {
     header > h1 {
         font-size: 40px;
     }
@@ -132,6 +186,20 @@ a::after {
     p {
         margin-left: 50px;
         margin-right: 50px;
+        font-size: 20px;
+    }
+
+    #sitacao {
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 165px;
+    text-shadow: black 1px 1px 12px;
+    font-size: 18px;
+    }
+
+    .obras {
+        grid-template-columns: 1fr;
     }
 
 }
